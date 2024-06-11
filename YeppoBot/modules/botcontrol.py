@@ -31,7 +31,6 @@ from YeppoBot import (
     tgbot,
     user,
     bot,
-    botusername,
     on_reopen_plugin
 )
 from YeppoBot.modules.sql_helper.bot_blacklists import check_is_black_list
@@ -199,6 +198,8 @@ async def botsettings(event):
         
 @callback(data=re.compile(b"plugin"))
 async def pluginmenu(event):
+    yeppoUBOT = await tgbot.get_me()
+    botusername = yeppoUBOT.username
     await bot.send_message(
         botusername, f".help"
     )
