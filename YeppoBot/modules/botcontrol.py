@@ -31,7 +31,7 @@ from YeppoBot import (
     tgbot,
     user,
     bot,
-    on_reopen_plugin
+    
 )
 from YeppoBot.modules.sql_helper.bot_blacklists import check_is_black_list
 from YeppoBot.modules.sql_helper.bot_starters import (
